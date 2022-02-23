@@ -11,7 +11,7 @@ import Movie from './components/Movie';
 // Styles
 import { GlobalStyle } from './GlobalStyle';
 
-const App = () => (
+const App: React.FC = () => (
     <Router>
       <Header />
 
