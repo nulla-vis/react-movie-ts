@@ -17,7 +17,7 @@ import { useHomeFetch } from '../hooks/useHomeFetch'
 // Image
 import NoImage from '../images/no_image.jpg';
 
-const Home = () => {
+const Home: React.FC = () => {
 
     const { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore } = useHomeFetch()
 
@@ -41,7 +41,7 @@ const Home = () => {
                     <Thumb key={ movie.id }
                     clickable= { true }
                     image = { movie.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}` : NoImage }
-                    moviedId = { movie.id }
+                    movieId = { movie.id }
                     />
                 )) }
             </Grid>

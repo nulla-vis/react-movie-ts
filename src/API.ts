@@ -20,6 +20,7 @@ export type Movie = {
   backdrop_path: string;
   id: number;
   original_title: string;
+  overview: string
   popularity: number;
   poster_path: string;
   titile: string;
