@@ -1,8 +1,11 @@
 import styled from "styled-components";
 // Config
 import { IMAGE_BASE_URL, BACKDROP_SIZE } from "../../config";
-
-export const Wrapper = styled.div`
+// Types
+type Props = {
+    backdrop: string;
+}
+export const Wrapper = styled.div<Props> `
     background: ${({ backdrop }) =>
         backdrop ? `url(${IMAGE_BASE_URL}${BACKDROP_SIZE}${backdrop})`: '#000'};
     background-size: cover;

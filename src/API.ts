@@ -23,7 +23,7 @@ export type Movie = {
   overview: string
   popularity: number;
   poster_path: string;
-  titile: string;
+  title: string;
   vote_average: number;
   vote_count: number;
   budget: number;
@@ -68,7 +68,7 @@ const apiSettings = {
     const endpoint: string = `${API_URL}movie/${movieId}?api_key=${API_KEY}`;
     return await (await fetch(endpoint)).json();
   },
-  fetchCredits: async (movieId: number): Promise<Movie> => {
+  fetchCredits: async (movieId: number): Promise<Credits> => {
     const creditsEndpoint: string = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
     return await (await fetch(creditsEndpoint)).json();
   },
